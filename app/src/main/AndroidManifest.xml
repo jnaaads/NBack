@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SingleBack" />
+        <activity android:name=".Results" />
         <activity android:name=".NBack"></activity>
     </application>
 

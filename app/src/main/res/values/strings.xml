@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">NBack</string>
-    <string name="start_button">Start N-Back</string>
-    <string name="visual">Visual</string>
-
+    <string name="start_button_label">Start N-Back</string>
+    <string name="visual_button_label">Visual</string>
+    <string name="result_label_1">You got</string>
+    <string name="result_label_2">correct!</string>
+    <string name="try_again_button">Try Again?</string>
 </resources>
