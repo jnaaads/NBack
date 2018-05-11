@@ -4,62 +4,163 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.joseanadia.nback.NBack">
+    tools:context="com.joseanadia.nback.NBack"
+    android:background="@color/lightBlue">
 
     <TextView
-        android:id="@+id/text_items"
+        android:id="@+id/lbl_inittime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:height="40dp"
-        android:textSize="40sp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/default_timestart"
+        android:textColor="@color/white"
+        android:textSize="35sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/lbl_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="28dp"
+        android:fontFamily="@font/raleway_regular"
+        android:text="@string/correct_label"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pbar_patterns"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_correct_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/raleway_regular"
+        android:text="@string/default_value"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pbar_patterns"
+        app:layout_constraintStart_toEndOf="@+id/lbl_correct" />
+
+    <TextView
+        android:id="@+id/lbl_wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/raleway_regular"
+        android:text="@string/wrong_label"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pbar_patterns"
+        app:layout_constraintStart_toEndOf="@+id/lbl_correct_value" />
+
+    <TextView
+        android:id="@+id/lbl_wrong_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/raleway_regular"
+        android:text="@string/default_value"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pbar_patterns"
+        app:layout_constraintStart_toEndOf="@+id/lbl_wrong" />
+
+    <TextView
+        android:id="@+id/lbl_missed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/missed_label"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/raleway_regular"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pbar_patterns"
+        app:layout_constraintStart_toEndOf="@+id/lbl_wrong_value" />
+
+    <TextView
+        android:id="@+id/lbl_missed_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/raleway_regular"
+        android:text="@string/default_value"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pbar_patterns"
+        app:layout_constraintStart_toEndOf="@+id/lbl_missed" />
+
+    <ProgressBar
+        android:id="@+id/pbar_patterns"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="11dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="28dp"
+        android:max="20"
+        android:progressBackgroundTint="@color/white"
+        android:progressTint="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="209dp"
-        android:layout_height="210dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:columnCount="3"
         android:rowCount="3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.372">
+        app:layout_constraintVertical_bias="0.498">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/b0"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/background_visual_unfilled"
+                android:gravity="center" />
 
             <Button
                 android:id="@+id/b1"
                 style="@style/Widget.AppCompat.Button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/background_visual_unfilled"
+                android:enabled="false"
                 android:gravity="center" />
 
             <Button
                 android:id="@+id/b2"
                 style="@style/Widget.AppCompat.Button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
-                android:enabled="false"
-                android:gravity="center" />
-
-            <Button
-                android:id="@+id/b3"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/background_visual_unfilled"
                 android:enabled="false"
                 android:gravity="center" />
         </TableRow>
@@ -69,32 +170,32 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/b3"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/background_visual_unfilled"
+                android:enabled="false"
+                android:gravity="center" />
+
+            <Button
                 android:id="@+id/b4"
                 style="@style/Widget.AppCompat.Button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/background_visual_unfilled"
                 android:enabled="false"
                 android:gravity="center" />
 
             <Button
                 android:id="@+id/b5"
                 style="@style/Widget.AppCompat.Button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
-                android:enabled="false"
-                android:gravity="center" />
-
-            <Button
-                android:id="@+id/b6"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/background_visual_unfilled"
                 android:enabled="false"
                 android:gravity="center" />
 
@@ -105,32 +206,32 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/b6"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/background_visual_unfilled"
+                android:enabled="false"
+                android:gravity="center" />
+
+            <Button
                 android:id="@+id/b7"
                 style="@style/Widget.AppCompat.Button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/background_visual_unfilled"
                 android:enabled="false"
                 android:gravity="center" />
 
             <Button
                 android:id="@+id/b8"
                 style="@style/Widget.AppCompat.Button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
-                android:enabled="false"
-                android:gravity="center" />
-
-            <Button
-                android:id="@+id/b9"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/background_visual_unfilled"
                 android:enabled="false"
                 android:gravity="center" />
 
@@ -140,14 +241,19 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/button_visual"
+        android:id="@+id/btn_visual"
         android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_button"
+        android:fontFamily="@font/raleway_regular"
         android:onClick="visualClick"
-        android:text="@string/visual_button_label"
+        android:text="@string/visual_label"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
 
 </android.support.constraint.ConstraintLayout>

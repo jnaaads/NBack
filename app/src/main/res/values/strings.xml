@@ -1,8 +1,28 @@
 <resources>
     <string name="app_name">NBack</string>
-    <string name="start_button_label">Start N-Back</string>
-    <string name="visual_button_label">Visual</string>
-    <string name="result_label_1">You got</string>
-    <string name="result_label_2">correct!</string>
-    <string name="try_again_button">Try Again?</string>
+
+    <string name="title">NBack</string>
+    <string name="play_label">PLAY</string>
+    <string name="setting_label">SETTINGS</string>
+
+    <string name="default_timestart">3</string>
+    <string name="correct_label">Correct: </string>
+    <string name="wrong_label">Wrong: </string>
+    <string name="missed_label">Missed: </string>
+    <string name="default_value">0</string>
+    <string name="visual_label">VISUAL</string>
+
+    <string name="results_title">RESULTS</string>
+    <string name="match_label">Matches:</string>
+    <string name="mistakes_label">Mistakes:</string>
+    <string name="score_label">Score:</string>
+    <string name="try_again_button">TRY AGAIN</string>
+
+    <string name="setting_title">SETTINGS</string>
+    <string name="nback_level">Level:</string>
+    <string name="one">1</string>
+    <string name="five">5</string>
+    <string name="done">DONE</string>
+    <string name="back">BACK</string>
+    <string name="next">NEXT</string>
 </resources>
